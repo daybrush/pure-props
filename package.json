@@ -1,0 +1,40 @@
+{
+  "name": "react-pure-props",
+  "version": "0.1.0",
+  "description": "compare only the props. If the state does not change, do not re-ender.",
+  "main": "./dist/pure-props.cjs.js",
+  "module": "./dist/pure-props.esm.js",
+  "sideEffects": false,
+  "types": "declaration/PureProps.d.ts",
+  "scripts": {
+    "build": "rollup -c && npm run declaration && print-sizes ./dist ",
+    "declaration": "rm -rf declaration && tsc -p tsconfig.declaration.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daybrush/react-pure-props.git"
+  },
+  "keywords": [
+    "pure-component",
+    "purecomponent",
+    "pure-props"
+  ],
+  "author": "Daybrush",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/daybrush/react-pure-props/issues"
+  },
+  "homepage": "https://github.com/daybrush/react-pure-props#readme",
+  "dependencies": {
+    "@types/react": "^16.8.19",
+    "@types/shallowequal": "^1.1.1",
+    "shallowequal": "^1.1.0"
+  },
+  "devDependencies": {
+    "@daybrush/builder": "^0.1.1",
+    "print-sizes": "0.0.4",
+    "react": "^16.8.6",
+    "tslint": "^5.17.0",
+    "typescript": "^3.5.1"
+  }
+}
