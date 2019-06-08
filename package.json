@@ -1,6 +1,6 @@
 {
   "name": "react-pure-props",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "compare only the props. If the state does not change, do not re-ender.",
   "main": "./dist/pure-props.cjs.js",
   "module": "./dist/pure-props.esm.js",

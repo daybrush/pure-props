@@ -2,9 +2,9 @@
 
 It is a little different from the `PureComponent` of react.
 
-First, compare only the props. If the state does not change, do not re-ender.
+First, compare only the props. If the state does not change, do not re-render.
 
-However, if the update does not change only through `setState`, it also resenders.
+However, if the update does not change only through `setState`, it also re-render.
 
 ## Installation
 ### npm
