@@ -1,19 +1,32 @@
 
 import builder from "@daybrush/builder";
+const commonjs = require("rollup-plugin-commonjs");
+const cjs = commonjs({
+    namedExports: {
+        "node_modules/shallowequal/index.js": undefined,
+    },
+})
+
+const defaultConfig = {
+    tsconfig: "tsconfig.build.json",
+    input: "src/PureProps.tsx",
+    exports: "default",
+    plugins: [cjs],
+    external: {
+        "react": "react",
+    },
+    resolve: true,
+};
 
 export default builder([
     {
-        tsconfig: "tsconfig.build.json",
-        input: "src/PureProps.tsx",
+        ...defaultConfig,
         output: "./dist/pure-props.esm.js",
-        exports: "default",
         format: "es",
     },
     {
-        tsconfig: "tsconfig.build.json",
-        input: "src/PureProps.tsx",
+        ...defaultConfig,
         output: "./dist/pure-props.cjs.js",
-        exports: "default",
         format: "cjs",
     },
 ]);
