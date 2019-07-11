@@ -1,0 +1,45 @@
+{
+    "name": "preact-pure-props",
+    "version": "0.1.0",
+    "description": "compare only the props. If the state does not change, do not re-ender.",
+    "main": "./dist/pure-props.cjs.js",
+    "module": "./dist/pure-props.esm.js",
+    "sideEffects": false,
+    "types": "declaration/PureProps.d.ts",
+    "scripts": {
+        "build": "rollup -c && npm run declaration && print-sizes ./dist ",
+        "declaration": "rm -rf declaration && tsc -p tsconfig.declaration.json",
+        "start": "open ./public/index.html && rollup -c rollup.config.demo.js -w"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/daybrush/pure-props/tree/master/preact-pure-props"
+    },
+    "keywords": [
+        "pure-component",
+        "purecomponent",
+        "pure-props",
+        "preact"
+    ],
+    "author": "Daybrush",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/daybrush/pure-props/issues"
+    },
+    "homepage": "https://github.com/daybrush/pure-props#readme",
+    "dependencies": {
+        "@types/shallowequal": "^1.1.1",
+        "preact": "^8.4.2",
+        "preact-compat": "^3.19.0",
+        "shallowequal": "^1.1.0"
+    },
+    "devDependencies": {
+        "@daybrush/builder": "^0.1.1",
+        "react-pure-props": "^0.1.4",
+        "print-sizes": "0.0.4",
+        "rollup-plugin-css-bundle": "^1.0.4",
+        "rollup-plugin-preact": "^0.2.2",
+        "tslint": "^5.17.0",
+        "typescript": "^3.5.1"
+    }
+}
