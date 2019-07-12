@@ -1,6 +1,6 @@
 {
   "name": "react-pure-props",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "compare only the props. If the state does not change, do not re-ender.",
   "main": "./dist/pure-props.cjs.js",
   "module": "./dist/pure-props.esm.js",
@@ -26,11 +26,11 @@
   },
   "homepage": "https://github.com/daybrush/pure-props#readme",
   "dependencies": {
-    "@types/react": "^16.8.19",
-    "@types/shallowequal": "^1.1.1",
     "shallowequal": "^1.1.0"
   },
   "devDependencies": {
+    "@types/react": "^16.8.19",
+    "@types/shallowequal": "^1.1.1",
     "@daybrush/builder": "^0.1.1",
     "print-sizes": "0.0.4",
     "react": "^16.8.6",
