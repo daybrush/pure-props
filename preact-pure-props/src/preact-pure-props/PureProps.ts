@@ -1,5 +1,4 @@
 import PureProps from "react-pure-props";
-import { Component } from "preact";
+import { PurePropsInterface } from "./types";
 
-
-export default PureProps as new <T = {}, U = {}>(props: T) => Component<T, U>;
+export default PureProps as new <T = {}, U = {}>(props: any) => PurePropsInterface<T, U>;
